@@ -24,10 +24,6 @@ It consist of Control Flow and Data Flow
 
 ### Control Flow
 
-<p style="text-align:center">
-  <img src="./Images/Telecom-Control_Flow.png" alt="control-flow">
-</p>
-
 * Every run for the package we get new batch_id depending on the last batch_id at the `audit_dim`
 * Iterates the data files to extract data from it
 * Inserting a new record in the audit dimension includes `batch_id`, `package name`, `file name`
@@ -37,9 +33,6 @@ It consist of Control Flow and Data Flow
 
 ### Data Flow
 
-<p style="text-align:center">
-  <img src="./Images/Telecom-Data_Flow.png" alt="data-flow">
-</p>
  
 * Reading the data from the files and check if it is matched with the data quality rules we made
 * If it is rejected from source, it will be stored in `err_source_output` table
@@ -50,10 +43,6 @@ It consist of Control Flow and Data Flow
 * Making the required derived columns like tac, snr columns from `imei` column
 
 ## Database Schema Design
-
-<p style="text-align:center">
-  <img src="./Images/schema.png" alt="schema">
-</p>
 
 ## Usage
 
